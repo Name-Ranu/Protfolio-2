@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> My Protfolio Website</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/eada979e8a.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div id="header">
+        <div class="container">
+            <nav>
+                <ul>
+                    <li> <a href="#">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Contact Me</a></li>
+                    <li><a href="#">PROTFOLIO</a></li>
+                    <li><a href="#">Languages I know</a></li>
+                </ul>
+            </nav>
+            <div class="header-text">
+                <p>Graphic desginer</p>
+                <h1>Hi, I am Ranu Sarkar From India</h1>
+            </div>
+        </div>
+    </div>
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <h2>My self Ranu and i graduated from high school and now i am doing web development iternship because i want to study in Korea</h2>
+                </div>
+                <div class="avout-col-2">
+                    <h1 class="sub-title">About Me</h1>
+                    <p> And my date of birth is - 15th april 2006 </p>
+
+                    <div class="tab-title">
+                        <p class="tab-links active-link" onclick="opentab('Skills')">Skills</p>
+                        <p class="tab-links" onclick="opentab('Experience')">Experience</p>
+                        <p class="tab-links"onclick="opentab('Education')">Education</p>
+                    </div>
+                    <div class="tab-contents active-tab" id="Skills" >
+                        <ul>
+                            <li><span>Web developer</span><br> Designing web/app</li>
+                            <li><span>App developer</span><br>Desiging app</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="Experience">
+                        <ul>
+                            <li><span>2024-current</span><br> Graphic design internship in a multinational company</li>
+                            <li><span>2024-current </span><br> doning a web development internship</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="Education">
+                        <ul>
+                            <li><span> I am graduated from my high school</span><br> my major was science </li>
+                            <li><span>I am currently learning Korean Language</span><br> I also can speak English , hindi , bengali language</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="services">
+        <div class="container">
+            <h1 class="sub-title">My services</h1>
+            <div class="services-list">
+                <div>
+                    <i class="fa-solid fa-code"></i>
+                    <h2>Web Design</h2>
+                    <p>I am a  desginer so in my youtube and instagram i post design related video so i think if you see this it will be help full for you</p>
+                    <a href="#">Learn more</a>
+                </div>
+                <i class="fa-solid fa-crop"></i>
+                <div>
+                    <h2> Wen Developer</h2>
+                    <p> I am a web developer and i post some tips on my youtube for web developmet</p>
+                    <a href="#">Learn moer</a>
+                </div>
+            </div>
+        </div
+        </div>
+        <div id="protfolio">
+            <div class="container">
+                <h1 class="sub-title">My work</h1>
+                <div class="work-list">
+                    <div class="work">
+                    <h1> I am a student and i am a fresher so i am working as a web development and this is my works</h1>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    <script>
+        var tablinks= document.getElementsByClassName("tab-links")
+        var tabcontents= document.getElementsByClassName("tab-contents")
+        function opentab(tabname){
+            for(tablink of tablinks){
+                tablink.classList.remove("active-link");
+         }
+         for(tabcontent of tabcontents){
+            tabcontent.classList.remove("active-tab");
+         }
+         event.currentTarget.classList.add("active-link");
+         document.getElementById(tabname).classList.add("active-tab");
+        }
+    </script>
+</body>
+</html>
